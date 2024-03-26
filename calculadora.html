@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="./css/style-calculadora.css">
+<link rel="stylesheet" href="./css/bars.css">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<title>calcular Interes</title>
+</head>
+<body>
+<!--BARS DESPLAZAR Y MENU---------------------------------------->
+    <div class="container-desplazar">
+        <div class="content">
+            <div class="item">Invierte en cripto, gana un 11% mensual.</div>
+            <!-- Puedes agregar más elementos aquí -->
+        </div>
+        <div class="menu">
+            <img src="./img/logo.svg" alt="Logo" class="logo">
+            <img src="./icon/menu.png" alt="Logo" class="menu-logo" id="botonMenu">
+            <img src="./icon/X.png" alt="Logo" class="menu-logo" id="botonX">
+
+            <div id="menuDesplegable" class="ampliarMenu">
+                <div id="lineMenu" class="menu-item" onclick="toggleSubMenu('opcion1', 'icon1')">
+                <a class="href" href="./index.html">
+                  <span>Inicio</span>
+                </a>
+                  <!--
+                  <i class="fas fa-chevron-down" id="icon1"></i>
+                  <div id="opcion1" class="sub-menu">
+                    <div class="sub-menu-item">Perfil</div>
+                    <div class="sub-menu-item">Configuración</div>
+                  </div>
+                -->
+                </div>
+<!--   
+                <div id="lineMenu" class="menu-item" onclick="toggleSubMenu('opcion2', 'icon2')">
+                  <span>Mensajes</span>
+                  <i class="fas fa-chevron-down" id="icon2"></i>
+                  <div id="opcion2" class="sub-menu">
+                    <div class="sub-menu-item">Bandeja de entrada</div>
+                    <div class="sub-menu-item">Enviar mensaje</div>
+                    <div class="sub-menu-item">Enviar mensaje</div>
+                    <div class="sub-menu-item">Enviar mensaje</div>
+                  </div>
+                </div>
+                <div id="lineMenu" class="menu-item" onclick="toggleSubMenu('opcion3', 'icon3')">
+                  <span>Notificaciones</span>
+                  <i class="fas fa-chevron-down" id="icon3"></i>
+                  <div id="opcion3" class="sub-menu">
+                    <div class="sub-menu-item">Configurar notificaciones</div>
+                    <div class="sub-menu-item">Historial de notificaciones</div>
+                  </div>
+                </div>
+                <div id="lineMenu" class="menu-item" onclick="toggleSubMenu('opcion4', 'icon4')">
+                  <span>Inicio</span>
+                  <i class="fas fa-chevron-down" id="icon4"></i>
+                  <div id="opcion4" class="sub-menu">
+                    <div class="sub-menu-item">Perfil</div>
+                    <div class="sub-menu-item">Configuración</div>
+                  </div>
+                </div>
+-->
+            </div>
+        </div>
+    </div>
+<!--CALCULADORA----------------------------------------------------->
+<div class="main-container-calculadora">
+  <div class="container-calculadora">
+    <h1>Calculadora Interés Compuesto</h1>
+    <div class="alineado">
+      <label for="inversion">Inversión inicial:</label>
+      <input type="text" pattern="[0-9]*" inputmode="numeric" id="inversion" placeholder="Ingrese la inversión">
+      <button onclick="calcularInteres()">Calcular</button>
+    </div>
+    <div class="resultados" id="resultados">
+      <p class="p-l">Interés Compuesto Diario: </p>
+      <p class="p-r">$0.00</p>
+      <p class="p-l">Interés Compuesto Semanal: </p>
+      <p class="p-r">$0.00</p>
+      <p class="p-l">Interés Compuesto Mensual: </p>
+      <p class="p-r">$0.00</p>
+      <p class="p-l">Total Recompenza: </p>
+      <p class="p-r">$0.00</p>
+    </div>
+  </div>
+</div>
+<!--SLIDER--------------------------------------------------------->
+
+<!--SLIDER--------------------------------------------------------->
+<!--SLIDER--------------------------------------------------------->
+<!--SLIDER--------------------------------------------------------->
+<!--SLIDER--------------------------------------------------------->
+    <script src="./script/scriptCalculadora.js"></script>
+    <script src="./script/script-bars.js"></script>
+    
+</body>
+</html>

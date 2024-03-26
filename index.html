@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="./css/style.css">
+<link rel="stylesheet" href="./css/bars.css">
+<link rel="stylesheet" href="./css/slider.css">
+
+
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<title>INSPIRE</title>
+</head>
+<body>
+<!--BARS DESPLAZAR Y MENU---------------------------------------->
+    <div class="container-desplazar">
+        <div class="content">
+            <div class="item">Invierte en cripto, gana un 11% mensual.</div>
+            <!-- Puedes agregar más elementos aquí -->
+        </div>
+        <div class="menu">
+            <img src="./img/logo.svg" alt="Logo" class="logo">    
+            <img src="./icon/menu.png" alt="Logo" class="menu-logo" id="botonMenu">
+            <img src="./icon/X.png" alt="Logo" class="menu-logo" id="botonX">
+            <div id="menuDesplegable" class="ampliarMenu">
+           
+                <div id="lineMenu" class="menu-item" onclick="toggleSubMenu('opcion1', 'icon1')">
+                  <span>Servicios</span>
+                  <i class="fas fa-chevron-down" id="icon1"></i>
+                  <div id="opcion1" class="sub-menu">
+                    <a class="href" href="./calculadora.html">
+                    <div class="sub-menu-item">Interes Compuesto</div>
+                    </a>
+                    <div class="sub-menu-item">lorem</div>
+                  </div>
+                </div>
+<!--                   
+                <div id="lineMenu" class="menu-item" onclick="toggleSubMenu('opcion2', 'icon2')">
+                  <span>lorem</span>
+                  <i class="fas fa-chevron-down" id="icon2"></i>
+                  <div id="opcion2" class="sub-menu">
+                    <div class="sub-menu-item">lorem</div>
+                    <div class="sub-menu-item">lorem</div>
+                    <div class="sub-menu-item">lorem</div>
+                    <div class="sub-menu-item">lorem</div>
+                  </div>
+                </div>
+                <div id="lineMenu" class="menu-item" onclick="toggleSubMenu('opcion3', 'icon3')">
+                  <span>lorem</span>
+                  <i class="fas fa-chevron-down" id="icon3"></i>
+                  <div id="opcion3" class="sub-menu">
+                    <div class="sub-menu-item">lorem</div>
+                    <div class="sub-menu-item">lorem</div>
+                  </div>
+                </div>
+                <div id="lineMenu" class="menu-item" onclick="toggleSubMenu('opcion4', 'icon4')">
+                  <span>lorem</span>
+                  <i class="fas fa-chevron-down" id="icon4"></i>
+                  <div id="opcion4" class="sub-menu">
+                    <div class="sub-menu-item">lorem</div>
+                    <div class="sub-menu-item">lorem</div>
+                  </div>
+                </div>
+-->         </div>
+        </div>
+    </div>
+
+<!--INICIO PAGINA--------------------------------------------------->
+    <div class="contenedor">
+        <img src="./img/2.jpg" alt="Descripción de la imagen">
+        <div class="degradado"></div>
+        <div class="contenido">
+            <h1>Invierte en cripto. Inspira tu futuro.</h1>
+            <p>Inspira tu futuro con criptomonedas en Inspire. Descubre proyectos innovadores para invertir y alcanzar el éxito financiero.</p>
+            <a class="boton" >Mas imformacion</a>
+        </div>
+    </div>
+<!--SLIDER--------------------------------------------------------->
+    <div class="allContainer">
+      <div class="controls">
+          <i id="buttom-After" class="control-icon prev fa fa-chevron-left" onclick="changeSlide(-1)"></i>
+      </div>
+      <div class="container-slider">
+          <div class="slider">
+              <div class="slide active">
+                <img src="./img/logo.svg" alt="Imagen 1">
+                <div class="text-container">
+                    <h2>Slide 1</h2>
+                    <p>Actualmente me encuentro trabajando con una empresa de inteligencia artificial y mineria de criptomoneda donde puedes tener ganancias totalmente en automatico.</p>
+                </div>
+              </div>
+              <div class="slide">
+                <img src="./img/1.jpg" alt="Imagen 2">
+                <div class="text-container">
+                    <h2>Slide 2</h2>
+                    <p>Para hacer dinero con la empresa simplemente debes comprar un paquete de mineria, a partir de $100 dolares en adelante y comenzaras a ver tus ganancias de lunes a lunes, tus ganancias van a depender de que tan pequeño o que tan grande sea tu paquete de mineria.</p>
+                </div>
+              </div>
+              <div class="slide">
+                  <img src="./img/2.jpg" alt="Imagen 3">
+                  <div class="text-container">
+                    <h2>Slide 3</h2>
+                    <p>Ahora puedes retirar tus ganancias diariamente, solo necesitas acumular un mínimo de 50 dólares generados. Además, los pagos serán procesados al instante para ofrecerte una experiencia fluida. Esta nueva opción te brinda mayor comodidad en la gestión de tus fondos.</p>
+                  </div>
+              </div>
+              <div class="slide">
+                  <img src="./img/1.jpg" alt="Imagen 4">
+                  <div class="text-container">
+                    <h2>Slide 4</h2>
+                    <p>Con esta empresa ganas hasta un 250% de tu inversion es decir que si haces por ejemplo una inversion de un paquete minero de $1000 dolares ganaras hasta llegar a $2500 dolares que es el 250% de tu inversion y lo mas importante no te quita comision de retiro y llega al instante.</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="controls">
+          <i id="buttom-Before" class="control-icon next fa fa-chevron-right" onclick="changeSlide(1)"></i>
+      </div>
+    </div>
+<!--SLIDER--------------------------------------------------------->
+    <script src="./script/script-bars.js"></script>
+    <script src="./script/script-slider.js"></script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+/*-----------------CUERPO------------------------------------------*/
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "IBM Plex Sans", sans-serif;
+    height: 2000px;
+    background-color: rgb(9, 10, 9);
+}
+body::-webkit-scrollbar {
+    width: 5px;               /* width of the entire scrollbar */
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: rgb(0, 0, 0);        /* color of the tracking area */
+    box-shadow: inset 0 0 5px grey;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background: linear-gradient(to right, #66fd7a, #61cad8, #52b1ff); /* Degradado lineal */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+   
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+/*---------------PAGINA INICIAL------------------------------------*/
+
+/* Estilos para el pagina */
+/* Estilos generales */
+.contenedor {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    background-color: #000000;
+}
+.contenedor img {
+    width: 100%;
+    height: auto;
+    opacity: 50%;
+}
+.degradado {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 200px; /* Altura del degradado, ajusta según sea necesario */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(9, 10, 9)); /* Degradado de transparente a negro */
+  }
+.contenido {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 6vw;
+    width: 80%;
+    height: 60%;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-style: normal;
+}
+.contenido h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 8vw;
+    font-weight: 900;
+    margin-bottom: 2vw;
+    line-height: 1; /* Cambia este valor según tus necesidades */
+}
+.contenido p {
+    margin: 0;
+    margin-top: 5vw;
+    margin-bottom: 4vw;
+    padding: 0vw 9vw;
+    font-size: 2vw;
+    font-weight: 400;
+    font-style: normal;
+}
+.boton {
+    background: rgba(0, 0, 0, 0.932);
+    margin: 0;
+    padding: 0;
+    padding: 1vw 8vw 1vw 8vw;
+    text-align: center;
+    color: rgb(194, 194, 194);
+    font-size: 2vw;
+    font-weight: 900;
+    border-radius: 10vw;
+}
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 600px) {
+    .contenido {
+        font-size: 5vw;
+    }
+}
+/*-----------------<a href>----------------------------------------*/
+.href {
+    text-decoration: none;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+}
+/*-----------------SLIDER------------------------------------------*/
+
+/*-----------------SLIDER------------------------------------------*/
+
+/*-----------------SLIDER------------------------------------------*/
+
+/*-----------------SLIDER------------------------------------------*/
+
+/*-----------------SLIDER------------------------------------------*/
+
+/*-----------------SLIDER------------------------------------------*/
+
+/*-----------------SLIDER------------------------------------------*/
+
+/*-----------------SLIDER------------------------------------------*/
+

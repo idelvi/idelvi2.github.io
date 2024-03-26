@@ -1,0 +1,209 @@
+/* Estilo para la barra desplazar */
+.container-desplazar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(to right, #66fd7a, #61cad8, #52b1ff); /* Degradado lineal */
+  color: #000000;
+  padding: 6px 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Asegura que la barra esté por encima del contenido */
+  animation: 500ms linear 0s;
+  animation-name: bajar;
+}
+.content {
+  animation: desplazar 15s linear infinite; /* Animación para desplazar el texto */
+}
+
+.item {
+  font-size: 1em; /* Tamaño grande para atraer la atención */
+  margin-left: 10px; /* Espacio entre el texto anterior y este */
+  white-space: nowrap;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* -------------Estilos para el menú ---------------*/
+
+.menu {
+  position:absolute;
+  transform: translatey(46px);
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #000000ec;
+  color: #fff;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000; /* Asegura que la barra esté por encima del contenido */
+}
+
+.logo {
+  width: 4em;
+  height: auto;
+}
+
+/*Ancho mas movil*/
+@media only screen and (max-width: 700px) {
+    .logo {
+        width: 4em;
+    }
+    /*-----Media menu vertical movil---------*/
+    #botonMenu {
+        border: none;
+        cursor: pointer;
+        background-color: #fff;
+      }
+    #botonX {
+        display: none;
+        border: none;
+        cursor: pointer;
+        background-color: #fff;
+    }
+    .ampliarMenu {
+        margin: 0;
+        padding: 0;
+        padding-left: 20px;
+        padding-right: 20px;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        height: 500px;
+        background-color: #000000;
+        opacity: 98%;
+        z-index: 1;
+      }
+    #lineMenu {
+        border-bottom: 0.1px solid #383838; /* Color de la línea */
+    }
+    .menu-item {
+        align-items: center;
+        padding: 10px;
+        cursor: pointer;
+        justify-content: space-between; /* Para alinear los íconos a la derecha */
+      }
+      .menu-item i {
+        margin-right: 10px;
+        color: #fff;
+      }
+    .sub-menu {
+      margin-top: 5px;
+        display: none;
+        flex-direction: column;
+        padding-left: 20px;
+        background-color: rgb(43, 46, 58);
+        opacity: 98;
+        border-radius: 10px;
+    
+    }
+    .sub-menu-item {
+        padding: 5px;
+        transition: background-color 0.3s;
+      }
+    .sub-menu.show {
+        display: flex;
+    }
+    .rotate-icon {
+        transition: transform 0.3s ease;
+    }
+    .rotate {
+        transform: rotateX(180deg);
+    }
+}
+/*Ancho mas pantalla*/
+@media only screen and (min-width: 700px) {
+    .logo {
+        width: 6em;
+    }
+    .menu-logo {
+        display: none;
+    }
+    /*-----Media menu horizontal------------*/
+
+    .ampliarMenu {
+        display: flex;
+        justify-content: right;
+        padding: 0;
+        margin: 0;
+        color: #fff;
+        
+    }
+      .menu-item {
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        cursor: pointer;
+      }
+      .menu-item i {
+        margin: 0;
+        padding: 0;
+        padding-left: 10px;
+        transition: transform 0.3s; /* Agregamos transición para la rotación */
+      }
+      .sub-menu {
+        position: absolute;
+        top: 48px;
+        right: 0;
+        display: none;
+        background-color: #000000;
+        padding: 10px;
+      }
+      .sub-menu.show {
+        display: block;
+      }
+      .sub-menu-item {
+        padding: 5px;
+        white-space: nowrap;
+        transition: background-color 0.3s;
+      }
+      .sub-menu-item:hover {
+        background-color: #555;
+      }
+      /* Clase para rotar el ícono */
+      .rotate {
+        transform:rotatex(-180deg);
+      }
+}
+/*-------------------------------------------*/
+@keyframes desplazar {
+  0% { transform: translateX(160%); } /* Comienza fuera del área visible */
+  100% { transform: translateX(-160%); } /* Se desplaza hacia la izquierda */
+}
+@keyframes subir {
+  from {
+      /* pushes the sun down past the viewport */
+      transform: translateY(27px);
+  }
+  to {
+      /* returns the sun to its default position */
+      transform: translateY(-27);
+  }
+}
+@keyframes bajar {
+  from {
+      /* pushes the sun down past the viewport */
+      transform: translateY(-27px);
+  }
+  to {
+      /* returns the sun to its default position */
+      transform: translateY(27);
+  }
+}
+
+/* Oculta la barra cuando la barra1 está oculta */ 
+.container-desplazar.ocultar {
+  top: -32px; /* Oculta la barra al moverla hacia arriba */
+  animation: 500ms linear 0s;
+  animation-name: subir;
+}
+.menu.ocultar {
+  display: none; /* Oculta la barra cuando la barra1 está oculta */  
+}
