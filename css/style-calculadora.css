@@ -132,12 +132,23 @@ body::-webkit-scrollbar {
 /*-------------------------------------------------*/
 
 @media only screen and (max-width: 700px) {
-
-  .container-calculadora {
-    
+  .main-container-calculadora{
     width: 100%; /* Ancho del contenedor principal */
     height: 100%;
-    background-color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../img/up.png');
+    background-size: cover; /* Esto asegura que la imagen de fondo cubra todo el cuerpo */
+    background-position: center; /* Esto posiciona la imagen de fondo en el centro del cuerpo */
+    /* Otros estilos opcionales */
+  }
+  .container-calculadora {
+    margin: 0;
+    width: 100%; /* Ancho del contenedor principal */
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.753);
     opacity: 95%;
     color: aliceblue;
     border-radius: 0;
@@ -146,7 +157,7 @@ body::-webkit-scrollbar {
   }
   .container-calculadora h1 {
     font-size: 6vw;
-    margin-top: 80px;
+    margin-top:120px;
     margin-bottom: 40px;
 }
 
